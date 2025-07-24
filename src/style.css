@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+#instaIcon {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 63px;
+  background: #23232a;
+  border-radius: 50%;
+  font-size: 30px;
+  transition: 0.5s;
+}
+#instaIcon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #e4405f;
+  transition: 0.5s;
+  transform: scale(0.9);
+  z-index: -1;
+}
+
+#instaIcon:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #e4405f;
+}
+#instaIcon:hover {
+  color: #e4405f;
+  box-shadow: 0 0 5px #e4405f;
+  text-shadow: 0 0 5px #e4405f;
+}
+
+#discordIcon {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 63px;
+  background: #23232a;
+  border-radius: 50%;
+  font-size: 30px;
+  transition: 0.5s;
+}
+#discordIcon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #5865f2;
+  transition: 0.5s;
+  transform: scale(0.9);
+  z-index: -1;
+}
+
+#discordIcon:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #5865f2;
+}
+#discordIcon:hover {
+  color: #5865f2;
+  box-shadow: 0 0 5px #5865f2;
+  text-shadow: 0 0 5px #5865f2;
+}
+
+.feature-card,
+.trust-card {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.feature-card:hover,
+.trust-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 32px 0 rgba(255, 165, 0, 0.15), 0 0 0 2px #ff9800;
+  z-index: 2;
+}

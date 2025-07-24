@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/style.css" rel="stylesheet" />
+    <title>Guildify</title>
+  </head>
+  <body>
+    <div id="app">
+      <div
+        class="min-h-screen bg-gradient-to-br from-[#18181b] via-[#1f1f23] to-[#2d1a00] font-sans text-white"
+      >
+        <!-- Hero Section -->
+        <section
+          class="relative flex flex-col items-center justify-center overflow-hidden px-4 py-20 md:py-32"
+        >
+          <!-- Glowing abstract background -->
+          <div
+            class="pointer-events-none absolute inset-0 z-0 parallax-bg"
+            data-parallax
+          >
+            <img
+              src="/bg.jpg"
+              alt="abstract"
+              class="absolute inset-0 h-full w-full object-cover opacity-30"
+            />
+            <!-- <div
+              class="absolute inset-0 bg-gradient-to-tr from-orange-500/40 via-orange-700/10 to-transparent opacity-80 blur-2xl"
+            ></div> -->
+            <div
+              class="absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 animate-pulse rounded-full bg-orange-500/20 blur-3xl"
+            ></div>
+          </div>
+          <div
+            class="animate-fade-in relative z-10 mx-auto max-w-2xl text-center"
+          >
+            <h1
+              class="animate-slide-in mb-4 text-5xl font-extrabold text-orange-400 drop-shadow-lg md:text-6xl"
+            >
+              Guildify
+            </h1>
+            <h2
+              class="animate-slide-in mb-4 text-2xl font-extrabold text-orange-400 drop-shadow-lg md:text-3xl"
+            >
+              “Made by gamers. Not marketers.”
+            </h2>
+            <p
+              class="animate-fade-in mb-8 text-lg font-medium text-gray-200 md:text-2xl"
+            >
+              The modern gaming community manager for guilds, parties, and
+              clans. Organize, track, and grow your community across games.
+            </p>
+            <p
+              class="animate-fade-in mb-8 text-lg font-medium text-gray-200 md:text-2xl"
+            >
+              Stay tuned for our upcoming launch!
+            </p>
+            <h2
+              class="text-2xl text-orange-400 font-bold drop-shadow-lg animate-pulse"
+            >
+              Follow Us!
+            </h2>
+            <div class="m-0 p-0 flex items-center justify-center py-5 gap-4">
+              <a
+                id="instaIcon"
+                href="https://www.instagram.com/guildify.app/?igsh=NXU3MXRqaHFhcm44#"
+              >
+                <i class="fa-brands fa-instagram text-[#e4405f]"></i>
+              </a>
+              <a id="discordIcon" href="https://discord.gg/e9yEA86FnJ">
+                <i class="fa-brands fa-discord text-[#5865F2]"></i>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="bg-[#18181b] px-4 py-16">
+          <h2
+            class="animate-slide-in mb-10 text-center text-3xl font-bold text-orange-400 md:text-4xl"
+          >
+            Features
+          </h2>
+          <div
+            class="mx-auto grid max-w-5xl grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+          >
+            <!-- FeatureCard 1 -->
+            <div
+              class="feature-card flex flex-col items-center justify-center bg-[#23232a] rounded-xl gap-1 p-10 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-orange-500/40"
+            >
+              <i data-lucide="medal" class="text-orange-400"></i>
+
+              <h3 class="text-xl font-bold text-orange-400 mb-1">DKP System</h3>
+              <p class="text-gray-200 text-center">
+                Track and manage Dragon Kill Points for fair loot distribution.
+              </p>
+            </div>
+            <!-- FeatureCard 2 -->
+            <div
+              class="feature-card flex flex-col items-center justify-center bg-[#23232a] rounded-xl gap-1 p-10 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-orange-500/40"
+            >
+              <i data-lucide="calendar" class="text-orange-400"></i>
+              <h3 class="text-xl font-bold text-orange-400 mb-1">
+                Event Planning
+              </h3>
+              <p class="text-gray-200 text-center">
+                Schedule and organize guild events with ease.
+              </p>
+            </div>
+            <!-- FeatureCard 3 -->
+            <div
+              class="feature-card flex flex-col items-center justify-center bg-[#23232a] rounded-xl gap-1 p-10 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-orange-500/40"
+            >
+              <i data-lucide="users" class="text-orange-400"></i>
+              <h3 class="text-xl font-bold text-orange-400 mb-1">
+                Raid Scheduling
+              </h3>
+              <p class="text-gray-200 text-center">
+                Coordinate raid times and attendance seamlessly.
+              </p>
+            </div>
+            <!-- FeatureCard 4 -->
+            <div
+              class="feature-card flex flex-col items-center justify-center bg-[#23232a] rounded-xl gap-1 p-10 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-orange-500/40"
+            >
+              <i data-lucide="gift" class="text-orange-400"></i>
+              <h3 class="text-xl font-bold text-orange-400 mb-1">
+                Loot Sharing
+              </h3>
+              <p class="text-gray-200 text-center">
+                Automate loot sharing and history tracking.
+              </p>
+            </div>
+            <!-- FeatureCard 5 -->
+            <div
+              class="feature-card flex flex-col items-center justify-center bg-[#23232a] rounded-xl gap-1 p-10 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-orange-500/40"
+            >
+              <i data-lucide="hand-coins" class="text-orange-400"></i>
+              <h3 class="text-xl font-bold text-orange-400 mb-1">
+                Auction System
+              </h3>
+              <p class="text-gray-200 text-center">
+                Run in-game auctions for items and loot.
+              </p>
+            </div>
+            <!-- FeatureCard 6 -->
+            <div
+              class="feature-card flex flex-col items-center justify-center bg-[#23232a] rounded-xl gap-1 p-10 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-orange-500/40"
+            >
+              <i data-lucide="activity" class="text-orange-400"></i>
+              <h3 class="text-xl font-bold text-orange-400 mb-1 text-center">
+                Member Activity
+              </h3>
+              <p class="text-gray-200 text-center">
+                Monitor member participation and engagement.
+              </p>
+            </div>
+            <!-- FeatureCard 7 -->
+            <div
+              class="feature-card flex flex-col items-center justify-center bg-[#23232a] rounded-xl gap-1 p-10 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-orange-500/40"
+            >
+              <i data-lucide="search" class="text-orange-400"></i>
+              <h3 class="text-xl font-bold text-orange-400 mb-1">
+                Party Finder
+              </h3>
+              <p class="text-gray-200 text-center">
+                Find and join parties across your games.
+              </p>
+            </div>
+            <!-- FeatureCard 8 -->
+            <div
+              class="feature-card flex flex-col items-center justify-center bg-[#23232a] rounded-xl gap-1 p-10 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-orange-500/40"
+            >
+              <i data-lucide="gamepad2" class="text-orange-400"></i>
+              <h3 class="text-xl font-bold text-center text-orange-400 mb-1">
+                Cross-game
+              </h3>
+              <p class="text-gray-200 text-center">
+                Manage multiple games and platforms in one place.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- UI Screenshots/Mockups Section -->
+
+        <!-- Community Trust Section -->
+        <section class="bg-[#18181b] px-4 py-16">
+          <h2
+            class="animate-slide-in mb-6 text-center text-3xl font-bold text-orange-400 md:text-4xl"
+          >
+            Trusted by People
+          </h2>
+          <div
+            class="mx-auto flex max-w-4xl flex-col items-center justify-center gap-8 md:flex-row"
+          >
+            <div
+              class="trust-card animate-fade-in w-full rounded-xl border-none bg-[#23232a] shadow-lg md:w-1/2 transition-transform duration-300 hover:scale-105 hover:shadow-orange-500/40"
+            >
+              <div class="flex flex-col h-60 items-center p-10">
+                <p class="mb-2 text-center text-lg text-gray-200">
+                  “They said they were building an app. I thought it was a
+                  cooking thing. Still proud.”
+                </p>
+                <span class="font-semibold text-orange-400"> - Grandma </span>
+              </div>
+            </div>
+            <div
+              class="trust-card animate-fade-in w-full rounded-xl border-none bg-[#23232a] shadow-lg md:w-1/2 transition-transform duration-300 hover:scale-105 hover:shadow-orange-500/40"
+            >
+              <div class="flex flex-col h-60 items-center p-10">
+                <p class="mb-2 text-center text-lg text-gray-200">
+                  “It started as a side project. Then we bought a domain. Now
+                  it's real.”
+                </p>
+                <span class="font-semibold text-orange-400">
+                  - Dev who panicked after the app got too good
+                </span>
+              </div>
+            </div>
+            <div
+              class="trust-card animate-fade-in w-full rounded-xl border-none bg-[#23232a] shadow-lg md:w-1/2 transition-transform duration-300 hover:scale-105 hover:shadow-orange-500/40"
+            >
+              <div class="flex flex-col h-60 items-center p-10">
+                <p class="mb-2 text-center text-lg text-gray-200">
+                  “I joined their test server and now I'm a guild leader. I
+                  didn't agree to this.”
+                </p>
+                <span class="font-semibold text-orange-400">
+                  - Neighbor roped in for QA
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Upcoming Features Section -->
+        <section class="relative bg-[#1f1f23] px-4 py-16">
+          <div class="pointer-events-none absolute inset-0">
+            <div
+              class="h-full w-full bg-gradient-to-r from-orange-500/10 to-transparent opacity-60 blur-2xl"
+            ></div>
+          </div>
+          <div class="relative z-10 mx-auto max-w-2xl text-center">
+            <h2
+              class="animate-slide-in mb-4 text-3xl font-bold text-orange-400 md:text-4xl"
+            >
+              Upcoming Features
+            </h2>
+            <ul class="mb-4 space-y-2 text-lg text-gray-200">
+              <li class="animate-fade-in">Mobile App</li>
+              <li class="animate-fade-in">Discord Bot Integration</li>
+              <li class="animate-fade-in">Advanced Analytics</li>
+              <li class="animate-fade-in">
+                Customizable Roles &amp; Permissions
+              </li>
+              <li class="animate-fade-in">Game API Sync</li>
+            </ul>
+            <p class="animate-pulse font-semibold text-orange-400">
+              Stay tuned for more updates!
+            </p>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="border-t border-orange-900/30 bg-[#18181b] px-4 py-10">
+          <div
+            class="mx-auto flex max-w-5xl flex-col items-center justify-between gap-10 md:flex-row"
+          >
+            <div class="flex items-center gap-3">
+              <div
+                class="flex h-10 w-10 animate-pulse items-center justify-center rounded-full bg-orange-500"
+              >
+                <!-- Gamepad2 icon placeholder -->
+                <svg width="24" height="24" fill="white">
+                  <rect x="6" y="12" width="12" height="6" rx="3" />
+                  <circle cx="9" cy="15" r="1" />
+                  <circle cx="15" cy="15" r="1" />
+                </svg>
+              </div>
+              <span class="text-xl font-bold text-orange-400">Guildify</span>
+            </div>
+
+            <div class="m-0 p-0 flex items-center justify-center py-5 gap-4">
+              <a
+                id="instaIcon"
+                href="https://www.instagram.com/guildify.app/?igsh=NXU3MXRqaHFhcm44#"
+              >
+                <i class="fa-brands fa-instagram text-[#e4405f]"></i>
+              </a>
+              <a id="discordIcon" href="https://discord.gg/e9yEA86FnJ">
+                <i class="fa-brands fa-discord text-[#5865F2]"></i>
+              </a>
+            </div>
+            <div class="text-center text-sm text-gray-400 md:text-right">
+              Contact:
+              <a
+                href="mailto:info@guildify.app"
+                class="text-orange-400 hover:underline"
+              >
+                info@guildify.app
+              </a>
+              <br />
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script
+      src="https://kit.fontawesome.com/b72c588ae5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      lucide.createIcons();
+
+      // Parallax effect for .parallax-bg
+      document.addEventListener("mousemove", function (e) {
+        const parallax = document.querySelector(".parallax-bg");
+        if (!parallax) return;
+        const x = (e.clientX / window.innerWidth - 0.5) * 30;
+        const y = (e.clientY / window.innerHeight - 0.5) * 30;
+        parallax.style.transform = `translate(${x}px, ${y}px) scale(1.03)`;
+      });
+      document.addEventListener("mouseleave", function () {
+        const parallax = document.querySelector(".parallax-bg");
+        if (!parallax) return;
+        parallax.style.transform = "";
+      });
+    </script>
+  </body>
+</html>
