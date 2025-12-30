@@ -1,22 +1,21 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+import { motion } from "framer-motion";
+import Image from "next/image";
 export default function HeroSection() {
   return (
     <section className="relative flex min-h-screen flex-col items-center justify-center pt-32 pb-16 overflow-hidden bg-black">
       {/* Hero Background Image */}
       <div className="absolute inset-0 z-0">
-        <Image 
-          src="/content.png" 
-          alt="Hero Background" 
+        <Image
+          src="/content.png"
+          alt="Hero Background"
           fill
           className="object-cover opacity-20"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black"></div>
       </div>
-      
-     
+
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/20  rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl"></div>
       <div className="max-w-5xl relative z-10 mx-auto px-6 text-center">
@@ -43,10 +42,10 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-6 text-5xl font-black leading-tight text-white sm:text-6xl lg:text-7xl"
         >
-          The Future of{' '}
+          The Future of{" "}
           <span className="bg-gradient-to-t from-primary via-orange-600 to-orange-400 bg-clip-text text-transparent">
             Guild & Community
-          </span>{' '}
+          </span>{" "}
           Management
         </motion.h1>
 
@@ -69,7 +68,6 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="flex w-full max-w-xl mx-auto flex-col sm:flex-row gap-3 relative z-20"
         >
-         
           <button className="w-full px-6 py-3 rounded-md bg-gradient-to-r from-primary to-orange-500 text-white font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all whitespace-nowrap cursor-pointer hover:animate-pulse">
             Join Our Discord Community
           </button>
