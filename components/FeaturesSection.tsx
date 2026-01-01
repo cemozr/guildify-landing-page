@@ -1,64 +1,116 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-
+import { motion } from "framer-motion";
+import ElectricBorder from "./ui/ElectricBorder";
 const features = [
   {
-    icon: 'group',
-    title: 'Guild Management',
-    description: 'Comprehensive roster tools with role-based access control, activity tracking, and alt character linking.',
-    status: 'Planned',
-    color: 'primary',
+    icon: "group_add",
+    title: "Community, Guild & Alliance Management",
+    description:
+      "Multi-layer support: Community, Guild, and Alliance. Each layer is managed separately with its own roles, permissions, events, and progression.",
+
+    color: "accent-gold",
   },
   {
-    icon: 'account_tree',
-    title: 'Sub-guild Structure',
-    description: 'Organize massive communities into squads, teams, or static groups with their own permissions and chats.',
-    status: 'Planned',
-    color: 'secondary',
+    icon: "gavel",
+    title: "Auction House",
+    description:
+      "Internal guild auction system for loot bidding, DKP integration, and transparent item distribution.",
+
+    color: "accent-gold",
   },
   {
-    icon: 'calendar_month',
-    title: 'Raid Scheduling',
-    description: 'Advanced calendar tools for recurring events, signup management, waitlists, and attendance tracking.',
-    status: 'In Dev',
-    color: 'primary',
-    statusColor: 'primary',
+    icon: "account_balance",
+    title: "Guild Bank",
+    description:
+      "Track deposits, withdrawals, taxes, and permissions with full visibility and role-based access control. Manage your loot before distribution",
+
+    color: "primary",
   },
   {
-    icon: 'savings',
-    title: 'Economy Tracking',
-    description: 'Track guild bank interactions, loot distribution systems (DKP/EPGP support), taxes, and donations.',
-    status: 'Planned',
-    color: 'accent-gold',
+    icon: "event",
+    title: "Event System",
+    description:
+      "Create raids, guild activities, and social events with signups, roles, waitlists, and attendance tracking.",
+
+    color: "primary",
   },
   {
-    icon: 'database',
-    title: 'Game Database',
-    description: 'Integrated item and quest database for your specific game. Link items directly in chat and event descriptions.',
-    status: 'Concept',
-    color: 'secondary',
+    icon: "groups",
+    title: "Member Management",
+    description:
+      "Manage ranks, specs, alts, activity status, and progression history across your entire guild.",
+
+    color: "secondary",
   },
   {
-    icon: 'map',
-    title: 'Map Editor',
-    description: 'Interactive tactical maps for planning raids and territory control wars. Draw, mark, and share strategies.',
-    status: 'Concept',
-    color: 'primary',
+    icon: "handyman",
+    title: "Crafting System",
+    description:
+      "Track crafters, professions, recipes, and resource requests within your guild ecosystem. Connect your crafters with guild members in need of crafted items.",
+
+    color: "secondary",
+  },
+  {
+    icon: "security",
+    title: "Role Management",
+    description:
+      "Granular permission system built for guild masters, officers, class leaders, and raid leads.",
+
+    color: "primary",
+  },
+  {
+    icon: "assignment",
+    title: "Quest System",
+    description:
+      "Guild-wide objectives, weekly tasks, and progression goals tied to participation and rewards.",
+
+    color: "secondary",
+  },
+  {
+    icon: "redeem",
+    title: "Reward Templates",
+    description:
+      "Create reusable reward structures for raids, quests, events, and seasonal guild activities.",
+
+    color: "accent-gold",
+  },
+  {
+    icon: "group_work",
+    title: "Party Management",
+    description:
+      "Form and manage parties, statics, and raid groups with role balance and availability tracking.",
+
+    color: "primary",
+  },
+  {
+    icon: "inventory",
+    title: "Loot Distribution",
+    description:
+      "Supports various loot distribution methods with full transparency.",
+
+    color: "accent-gold",
+  },
+  {
+    icon: "inventory",
+    title: "Mysterious Features",
+    description:
+      "And many more features that we can't reveal just yet. Stay tuned!",
+    color: "accent-gold",
   },
 ];
 
 export default function FeaturesSection() {
   return (
-    <motion.section 
+    <motion.section
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className="py-24 bg-black" 
+      className="py-24 bg-black"
       id="features"
     >
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -76,39 +128,35 @@ export default function FeaturesSection() {
             What We're Building
           </h2>
           <p className="text-gray-400">
-            Designed specifically for the complexities of modern MMORPGs and organized gaming groups.
+            Designed specifically for the complexities of modern MMORPGs and
+            organized gaming groups.
           </p>
         </motion.div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
-            <motion.div
+            <ElectricBorder
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="relative bg-zinc-900 rounded-lg p-6 border border-zinc-800 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/20 transition-all"
+              color="#F26400"
+              speed={0.2}
+              chaos={0.1}
+              borderRadius={10}
+              className="p-6 bg-zinc-900/50 backdrop-blur-sm"
             >
-              <div className="absolute top-4 right-4">
-                <span className={`text-[10px] font-bold uppercase px-2 py-1 rounded ${
-                  feature.status === 'In Dev' 
-                    ? 'bg-primary/20 text-primary border border-primary/30' 
-                    : feature.status === 'Concept'
-                    ? 'bg-zinc-800 text-gray-400 border border-zinc-700'
-                    : 'bg-zinc-800 text-gray-400 border border-zinc-700'
-                }`}>
-                  {feature.status}
-                </span>
+              <div className="flex flex-col h-full relative">
+                <div className="absolute top-0 right-0 w-10 h-10 rounded bg-gradient-to-br from-primary/20 to-orange-500/20 border border-primary/30 flex items-center justify-center text-primary">
+                  <span className="material-symbols-outlined text-xl">
+                    {feature.icon}
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 pr-14">
+                  {feature.title}
+                </h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
-              <div className="mb-4 w-10 h-10 rounded bg-gradient-to-br from-primary/20 to-orange-500/20 border border-primary/30 flex items-center justify-center text-primary">
-                <span className="material-symbols-outlined text-xl">{feature.icon}</span>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">
-                {feature.description}
-              </p>
-            </motion.div>
+            </ElectricBorder>
           ))}
         </div>
       </motion.div>

@@ -1,33 +1,52 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 const benefits = [
   {
-    title: 'MMORPG-First Design',
-    description: 'We understand what "Main Spec", "Off Spec", "DKP", and "Raid Lockout" mean.',
+    title: "One Platform. Multiple Worlds.",
+    description:
+      "Guildify supports multiple MMORPGs under a single unified system — no need to switch tools when your guild switches games.",
   },
   {
-    title: 'Scalable Architecture',
-    description: 'Whether you have 10 raiders or a 5,000 member alliance, Guildify performs flawlessly.',
+    title: "Built for Real Guild Leadership",
+    description:
+      "Guildify isn’t a chat tool. It’s a command center for MMO guilds that take structure seriously.",
   },
   {
-    title: 'Granular Permissions',
-    description: 'Military-grade role management to ensure your guild bank and strategies are secure.',
+    title: "MMO-Aware Systems",
+    description:
+      "Roles, specs, loot rules, attendance, progression. Guildify understands how MMORPG guilds actually function.",
+  },
+  {
+    title: "One Platform, Full Control",
+    description:
+      "Events, rosters, permissions, announcements, and member management — all in one place, fully connected.",
+  },
+  {
+    title: "Scales From Party to Alliance",
+    description:
+      "Whether you run a small raid group or a multi-guild coalition, Guildify grows with you without breaking.",
+  },
+  {
+    title: "Leadership-Grade Permissions",
+    description:
+      "Fine-grained access control built for officers, class leaders, and raid leads — no compromises.",
   },
 ];
 
 export default function AboutSection() {
   return (
-    <motion.section 
+    <motion.section
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className="py-24 bg-zinc-950" 
+      className="py-24 bg-zinc-950"
       id="about"
     >
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -43,13 +62,12 @@ export default function AboutSection() {
             className="flex-1 space-y-8"
           >
             <h2 className="text-4xl font-bold text-white leading-tight">
-              Built specifically for {' '}
+              Built specifically for{"  "}
               <span className="text-orange-500 ">guilds</span>.
             </h2>
             <p className="text-gray-400">
-              Generic management tools aren't
-              built for MMORPGs. Guildify is designed from the ground up with
-              gaming logic in mind.
+              Generic management tools aren't built for MMORPGs. Guildify is
+              designed from the ground up with gaming logic in mind.
             </p>
             <ul className="space-y-6">
               {benefits.map((benefit, index) => (
@@ -62,8 +80,18 @@ export default function AboutSection() {
                   className="flex items-start gap-4"
                 >
                   <div className="flex-shrink-0 w-5 h-5 rounded bg-green-500/20 text-green-500 flex items-center justify-center mt-1">
-                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    <svg
+                      className="w-3 h-3"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
                     </svg>
                   </div>
                   <div>
@@ -83,36 +111,13 @@ export default function AboutSection() {
             transition={{ duration: 0.8 }}
             className="flex-1 w-full"
           >
-            <div className="relative w-full aspect-square bg-zinc-900 rounded-xl border border-zinc-800 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/20 transition-all p-8 overflow-hidden">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="absolute top-12 left-8 right-12 h-24 bg-zinc-800/90 backdrop-blur border border-zinc-700 rounded p-4 flex gap-3"
-              >
-                <div className="w-12 h-12 rounded bg-primary/20 border border-primary/30"></div>
-                <div className="flex-1 flex flex-col gap-2">
-                  <div className="h-3 w-3/4 bg-zinc-700 rounded"></div>
-                  <div className="h-2 w-1/2 bg-zinc-700 rounded"></div>
-                </div>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="absolute top-44 left-16 right-8 h-36 bg-zinc-900/95 backdrop-blur border border-primary/40 rounded p-4 flex flex-col gap-3"
-              >
-                <div className="flex justify-between items-center mb-2">
-                  <div className="h-3 w-1/3 bg-primary/40 rounded"></div>
-                  <div className="h-2 w-12 bg-green-500/20 rounded"></div>
-                </div>
-                <div className="h-2 w-full bg-zinc-700 rounded"></div>
-                <div className="h-2 w-full bg-zinc-700 rounded"></div>
-                <div className="h-2 w-5/6 bg-zinc-700 rounded"></div>
-              </motion.div>
-            </div>
+            <Image
+              src="/features.png"
+              alt="Description"
+              width={500}
+              height={300}
+              className="rounded-xl"
+            />
           </motion.div>
         </div>
       </motion.div>
